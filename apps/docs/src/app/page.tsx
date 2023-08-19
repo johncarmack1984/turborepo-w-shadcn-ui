@@ -16,7 +16,14 @@ export default function Home() {
           </span>
         </h1>
         <div className="mx-auto mt-5 max-w-xl sm:flex sm:justify-center md:mt-8">
-          <Button />
+          <Button asChild>
+            <a href="https://ui.shadcn.com/docs">
+              Read the docs
+              <span className="ml-2 bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent">
+                →
+              </span>
+            </a>
+          </Button>
         </div>
       </main>
     </div>

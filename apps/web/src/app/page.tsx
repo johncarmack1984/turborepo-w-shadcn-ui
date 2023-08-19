@@ -34,12 +34,31 @@ export default function Home() {
           </span>
         </h1>
         <div className="mx-auto mt-5 max-w-xl sm:flex sm:justify-center md:mt-8">
-          <Button />
+          <Button asChild>
+            <a href="https://ui.shadcn.com/docs">
+              Read the docs
+              <span className="ml-2 bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent">
+                →
+              </span>
+            </a>
+          </Button>
         </div>
 
         <div className="mt-12 grid grid-cols-1 place-content-evenly gap-4 sm:grid-cols-3">
-          {CARD_CONTENT.map((card) => (
-            <Card key={card.title} {...card} />
+          {CARD_CONTENT.map(({ title, cta, href }) => (
+            <Card
+              key={title}
+              className="group mt-4 overflow-hidden rounded-lg border border-transparent bg-gradient-to-r from-secondary to-primary bg-origin-border text-[#6b7280]"
+            >
+              <a target="_blank" rel="noopener noreferrer" href={href}>
+                <div className="h-full bg-zinc-900 p-4">
+                  <p className="inline-block text-xl text-white">{title}</p>
+                  <div className="mt-4 text-xs group-hover:underline">
+                    {cta} →
+                  </div>
+                </div>
+              </a>
+            </Card>
           ))}
         </div>
       </main>
