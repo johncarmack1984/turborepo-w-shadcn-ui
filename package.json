@@ -1,6 +1,7 @@
 {
   "private": true,
   "scripts": {
+    "add:component": "npx shadcn-ui@latest add -p packages/ui/src/ -c packages/ui/ && echo \"\nRemember! Before you can use the component you still need to export it from packages/ui/src/index.tsx\n\"",
     "build": "turbo build",
     "dev": "turbo dev",
     "lint": "turbo lint",
