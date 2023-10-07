@@ -23,7 +23,7 @@
     "clsx": "^2.0.0",
     "eslint": "^8.47.0",
     "eslint-config-custom": "*",
-    "postcss": "^8.4.28",
+    "postcss": "^8.4.31",
     "react": "^18.2.0",
     "tailwind-config": "*",
     "tailwind-merge": "^1.14.0",
